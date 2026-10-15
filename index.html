@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moonwake Privacy Policy</title>
+<meta name="description" content="What Moonwake keeps on your device, what our ad partners receive when an ad is shown, and the choices you have, in plain language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ground: #F3EFE6;
+    --ground-lift: #FFFFFF;
+    --ground-deep: #E6E0D2;
+    --on-ground: #151B33;
+    --on-ground-soft: #5E6378;
+    --accent: #9A5A10;
+    --accent-bright: #E8962E;
+    --moss: #3F6F78;
+    --card: #FBF4E6;
+    --card-line: #E8B46A;
+    --on-card: #151B33;
+    --on-card-soft: #5E6378;
+    --rule: #00000018;
+    --shadow: 0 1px 2px #151b3310, 0 10px 30px -12px #151b3326;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #070B1C;
+      --ground-lift: #0F1530;
+      --ground-deep: #050812;
+      --on-ground: #F5EBDD;
+      --on-ground-soft: #A9A3B5;
+      --accent: #FFB347;
+      --accent-bright: #FFB347;
+      --moss: #7FC4CF;
+      --card: #141A36;
+      --card-line: #8A6A3C;
+      --on-card: #F5EBDD;
+      --on-card-soft: #B9B2C3;
+      --rule: #ffffff1c;
+      --shadow: 0 1px 2px #00000040, 0 20px 40px -20px #00000088;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #070B1C;
+    --ground-lift: #0F1530;
+    --ground-deep: #050812;
+    --on-ground: #F5EBDD;
+    --on-ground-soft: #A9A3B5;
+    --accent: #FFB347;
+    --accent-bright: #FFB347;
+    --moss: #7FC4CF;
+    --card: #141A36;
+    --card-line: #8A6A3C;
+    --on-card: #F5EBDD;
+    --on-card-soft: #B9B2C3;
+    --rule: #ffffff1c;
+    --shadow: 0 1px 2px #00000040, 0 20px 40px -20px #00000088;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--on-ground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap {
+    max-width: 700px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+
+  /* ---------- header ---------- */
+  header.masthead {
+    padding-block: 48px 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .brand svg { width: 28px; height: 28px; flex: none; }
+  .brand span {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 13.5px;
+    color: var(--on-ground-soft);
+  }
+  .meta b { color: var(--on-ground); font-weight: 600; }
+
+  /* ---------- summary callout ---------- */
+  .summary {
+    margin-block: 32px;
+    background: var(--card);
+    color: var(--on-card);
+    border: 1px solid var(--card-line);
+    border-radius: 14px;
+    padding: 22px 22px 6px;
+    box-shadow: var(--shadow);
+  }
+  .summary-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .summary-eyebrow svg { width: 15px; height: 15px; }
+  .summary h2 {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: var(--on-card);
+  }
+  .summary > p { color: var(--on-card-soft); margin-top: 0; }
+  .summary ul { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+  .summary li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14.5px;
+    color: var(--on-card);
+  }
+  .summary li svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--moss); }
+  .summary li.no svg { color: #C0644A; }
+
+  /* ---------- table of contents ---------- */
+  nav.toc {
+    margin-block: 28px 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: var(--ground-lift);
+  }
+  nav.toc p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--on-ground-soft);
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+    font-size: 14px;
+  }
+  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a { color: var(--on-ground); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* ---------- body sections ---------- */
+  main { padding-block: 12px 60px; }
+  section { padding-block: 30px; border-bottom: 1px solid var(--rule); scroll-margin-top: 20px; }
+  section:last-of-type { border-bottom: none; }
+
+  h2.section-title {
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.005em;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-wrap: balance;
+  }
+  h2.section-title .num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h3 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+  section p { margin: 0 0 14px; color: var(--on-ground); max-width: 62ch; }
+  section p.soft { color: var(--on-ground-soft); }
+  section ul, section ol.plain { margin: 0 0 14px; padding-left: 1.3em; max-width: 62ch; }
+  section li { margin-bottom: 6px; }
+  code {
+    font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--ground-deep);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .field-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 16px;
+    font-size: 14px;
+  }
+  .field-table th, .field-table td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .field-table th {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--on-ground-soft);
+  }
+  .field-table td:first-child { font-weight: 500; min-width: 9em; }
+  .field-table-wrap { overflow-x: auto; }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--on-card);
+    border: 1px solid var(--card-line);
+    white-space: nowrap;
+  }
+
+  /* ---------- footer ---------- */
+  footer {
+    padding-block: 30px 60px;
+    color: var(--on-ground-soft);
+    font-size: 13.5px;
+  }
+  footer a { color: var(--on-ground); }
+  .back-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 26px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 34px; }
+    nav.toc ol { columns: 1; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="50" cy="74" rx="40" ry="9" stroke="var(--moss)" stroke-width="3" opacity="0.7"/>
+        <ellipse cx="50" cy="74" rx="24" ry="5" stroke="var(--moss)" stroke-width="3" opacity="0.9"/>
+        <g fill="var(--accent-bright)">
+          <path d="M50 66 C40 52 42 34 50 20 C58 34 60 52 50 66 Z"/>
+          <path d="M50 66 C36 62 26 50 22 36 C36 38 46 50 50 66 Z" opacity="0.85"/>
+          <path d="M50 66 C64 62 74 50 78 36 C64 38 54 50 50 66 Z" opacity="0.85"/>
+        </g>
+        <circle cx="50" cy="58" r="5" fill="#FFF3D6"/>
+      </svg>
+      <span>Moonwake</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective <b>October 15, 2026</b></span>
+      <span>Developer: <b>Qobly</b></span>
+      <span>App: <b>Moonwake</b> (Android package <code>com.moonwake.game</code>)</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="summary-eyebrow">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Plain-language summary
+    </div>
+    <h2>Your game stays on your phone. Only our ad partners receive data, and only to show ads.</h2>
+    <p>Moonwake has no account and no server of its own. It is free because it shows ads, delivered by Unity. Here's exactly what that means.</p>
+    <ul>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Your progress, settings and year of birth are stored only on your device. Qobly never receives them.</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ads are served by Unity LevelPlay and Unity Ads, which receive device information such as your advertising ID and IP address in order to show and measure ads.</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> You decide whether ads may be personalised, and can change your mind any time in Settings &rarr; Privacy.</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Reminders are local notifications scheduled by your phone, never sent from a server.</li>
+      <li class="no"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> No account, no sign-in, no name or email collected, no in-app purchases.</li>
+      <li class="no"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> No access to your camera, microphone, contacts, photos or GPS location. The app never asks for these.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#scope">1. What this covers</a></li>
+      <li><a href="#on-device">2. What's stored on your device</a></li>
+      <li><a href="#ads">3. Advertising</a></li>
+      <li><a href="#choices">4. Your ad choices</a></li>
+      <li><a href="#children">5. Age and children</a></li>
+      <li><a href="#permissions">6. Permissions</a></li>
+      <li><a href="#not-collected">7. What we don't collect</a></li>
+      <li><a href="#rights">8. Your rights</a></li>
+      <li><a href="#retention">9. Retention and deletion</a></li>
+      <li><a href="#security">10. Security and transfers</a></li>
+      <li><a href="#changes">11. Changes to this policy</a></li>
+      <li><a href="#contact">12. Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section id="scope">
+      <h2 class="section-title"><span class="num">01</span> What this covers</h2>
+      <p>This policy describes how <strong>Moonwake</strong>, a calm river game made by <strong>Qobly</strong>, handles information when you play it on Android. It covers the app itself and the advertising inside it. It doesn't cover other Qobly products or websites you may reach from an ad.</p>
+      <p class="soft">Moonwake has no server component of its own. The river, music and artwork are all built into the app. The only parts of the app that use the internet are the advertising services described in section 3.</p>
+    </section>
+
+    <section id="on-device">
+      <h2 class="section-title"><span class="num">02</span> What's stored on your device</h2>
+      <p>Moonwake keeps a small amount of information on your phone using Android's standard app storage. None of it is sent to Qobly or to anyone else, and all of it is deleted when you uninstall the app or clear its storage.</p>
+      <div class="field-table-wrap">
+        <table class="field-table">
+          <thead><tr><th>What</th><th>Why it's stored</th></tr></thead>
+          <tbody>
+            <tr><td>Game progress</td><td>Lights, best scores, pearls, flames, unlocked worlds, cosmetics, missions and achievements, so your game is there next time</td></tr>
+            <tr><td>Settings</td><td>Sound and music volumes, haptics, reduced motion and river sky, so the game opens the way you left it</td></tr>
+            <tr><td>Year of birth</td><td>Asked once on first launch, so the ads you see are suitable for your age (see section 5)</td></tr>
+            <tr><td>Personalised-ads choice</td><td>So your choice is applied every time the game starts</td></tr>
+            <tr><td>Reminder settings</td><td>Whether reminders are on and at what time, to schedule them on your phone</td></tr>
+            <tr><td>Play statistics</td><td>Simple counts such as voyages sailed and time played, shown in the in-game Journal</td></tr>
+            <tr><td>Ad counters</td><td>How many ads were shown today and when, so the game can keep ads infrequent and respect daily limits</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="soft">None of this identifies you: there is no name or account attached to it, and it never leaves your device's storage.</p>
+    </section>
+
+    <section id="ads">
+      <h2 class="section-title"><span class="num">03</span> Advertising</h2>
+      <p>Moonwake is free to play and supported by ads. Ads are delivered through <strong>Unity LevelPlay</strong>, a mediation service from Unity Technologies (including its affiliate ironSource), and the ad networks it works with, currently <strong>Unity Ads</strong>. Ads appear only between voyages, or when you choose to watch one for a reward. They never interrupt play.</p>
+      <p>When the game requests or shows an ad, these partners collect information directly from your device. Qobly does not receive this information.</p>
+      <div class="field-table-wrap">
+        <table class="field-table">
+          <thead><tr><th>Information</th><th>Used by our partners to</th></tr></thead>
+          <tbody>
+            <tr><td>Advertising ID</td><td>Show and measure ads, limit how often you see the same ad, prevent fraud and, only if you allow it, personalise ads. You can reset or delete it in your phone's settings.</td></tr>
+            <tr><td>IP address and approximate location derived from it</td><td>Deliver ads suitable for your country or region, and prevent fraud. Precise GPS location is never accessed.</td></tr>
+            <tr><td>Device information</td><td>Model, operating system version, language, time zone, screen size and network type, used to deliver ads that work on your device.</td></tr>
+            <tr><td>Ad interactions</td><td>Whether an ad was shown, tapped or watched to the end, used for measurement, rewards and fraud prevention. Unity collects this during the ad itself, not during gameplay.</td></tr>
+            <tr><td>Diagnostics</td><td>Technical information about ad loading and errors, used to keep ads working reliably.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Each partner handles this information under its own privacy policy:</p>
+      <ul>
+        <li>Unity (Unity LevelPlay, ironSource and Unity Ads): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Game Player and App User Privacy Policy</a></li>
+      </ul>
+      <p class="soft">If we add another ad network in the future, it will be listed here before it appears in the game.</p>
+    </section>
+
+    <section id="choices">
+      <h2 class="section-title"><span class="num">04</span> Your ad choices</h2>
+      <ul>
+        <li><strong>Personalised ads:</strong> turn them on or off at any time in <em>Settings &rarr; Privacy &rarr; Personalised ads</em>. When they are off you still see ads, and the same number of them, but they are not based on a profile of you.</li>
+        <li><strong>European Economic Area, United Kingdom and Switzerland:</strong> the first time you play, Moonwake asks whether ads may be personalised. Personalisation stays off unless you choose to allow it. "Allow" and "Don't allow" are offered equally.</li>
+        <li><strong>United States and other regions:</strong> switching personalised ads off is our <em>"Do Not Sell or Share My Personal Information"</em> option. It tells our partners not to use your data for targeted advertising.</li>
+        <li><strong>Advertising ID:</strong> you can reset or delete it at any time in Android <em>Settings &rarr; Privacy &rarr; Ads</em> (the exact path varies by phone).</li>
+      </ul>
+      <p class="soft">Your choice is passed to Unity LevelPlay before any ad is requested, and again whenever you change it. LevelPlay forwards it to every ad network it works with.</p>
+    </section>
+
+    <section id="children">
+      <h2 class="section-title"><span class="num">05</span> Age and children</h2>
+      <p>Moonwake is a general-audience game and isn't directed at children. On first launch it asks for your year of birth, without suggesting any particular answer, and stores it only on your device.</p>
+      <ul>
+        <li>If you are <strong>under 13</strong>, our ad partners are told to treat you as a child under the U.S. Children's Online Privacy Protection Act (COPPA): ads are never personalised and no behavioural profile is built.</li>
+        <li>In the EEA, UK and Switzerland, ads are never personalised for anyone <strong>under 16</strong>.</li>
+        <li>The year of birth can't be changed afterwards, so these protections can't be switched off from inside the game.</li>
+      </ul>
+      <p>If you believe a child has used Moonwake and that data about them was collected, please contact us. We'll help you contact Unity to have it removed.</p>
+    </section>
+
+    <section id="permissions">
+      <h2 class="section-title"><span class="num">06</span> Permissions</h2>
+      <p>On Android, Moonwake uses these permissions:</p>
+      <div class="field-table-wrap">
+        <table class="field-table">
+          <thead><tr><th>Permission</th><th>What it's for</th></tr></thead>
+          <tbody>
+            <tr><td><span class="pill">INTERNET</span> <span class="pill">ACCESS_NETWORK_STATE</span></td><td>Loading ads. The game itself plays fully offline.</td></tr>
+            <tr><td><span class="pill">AD_ID</span></td><td>Lets our ad partners read your advertising ID, as described in section 3</td></tr>
+            <tr><td><span class="pill">POST_NOTIFICATIONS</span></td><td>Shows the reminders you turned on. You're asked only when you switch reminders on, never at launch.</td></tr>
+            <tr><td><span class="pill">RECEIVE_BOOT_COMPLETED</span></td><td>Re-arms your scheduled reminders after your phone restarts</td></tr>
+            <tr><td><span class="pill">VIBRATE</span></td><td>Gentle haptic feedback during play, which you can turn off in Settings</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="not-collected">
+      <h2 class="section-title"><span class="num">07</span> What we don't collect</h2>
+      <p>To be specific rather than vague about it, Moonwake does not:</p>
+      <ul>
+        <li>Ask you to create an account, sign in, or give your name, email address or phone number.</li>
+        <li>Send your game progress, settings, year of birth or play statistics to Qobly or anyone else.</li>
+        <li>Use analytics or crash-reporting services of its own. The play statistics in the Journal are counted on your device and stay there.</li>
+        <li>Access your camera, microphone, contacts, photos, files or precise location.</li>
+        <li>Offer in-app purchases or collect payment information.</li>
+      </ul>
+    </section>
+
+    <section id="rights">
+      <h2 class="section-title"><span class="num">08</span> Your rights</h2>
+      <p>Depending on where you live, laws such as the EU and UK General Data Protection Regulation (GDPR) and U.S. state privacy laws (for example, California's CCPA/CPRA) give you rights over your personal information. These include the right to access, correct or delete it; to object to or restrict its use; to withdraw consent; and to opt out of its sale or sharing for targeted advertising. You will not be treated differently for using any of these rights.</p>
+      <p>Where the GDPR applies, personalised advertising is based on your consent, which you can withdraw at any time in Settings &rarr; Privacy. Our partners' handling of the information they need to deliver and measure non-personalised ads and to prevent fraud is explained in their own privacy policy.</p>
+      <p>Because Qobly holds no personal information about you, requests about advertising data are best sent to Unity using the link in section 3. We're always happy to help: write to us at the address below. You also have the right to complain to your local data protection authority.</p>
+    </section>
+
+    <section id="retention">
+      <h2 class="section-title"><span class="num">09</span> Retention and deletion</h2>
+      <ul>
+        <li><strong>On your device:</strong> kept until you uninstall Moonwake or clear its storage in Android settings, which deletes everything. "Reset progress" in Settings clears your game progress but keeps your privacy settings.</li>
+        <li><strong>With our ad partners:</strong> kept for as long as their privacy policy describes. You can limit it by switching personalised ads off and by resetting or deleting your advertising ID.</li>
+      </ul>
+      <p class="soft">There is no Moonwake account, so there is no account to close and no server-side copy held by Qobly to request deletion of.</p>
+    </section>
+
+    <section id="security">
+      <h2 class="section-title"><span class="num">10</span> Security and international transfers</h2>
+      <p>Information sent to our ad partners is encrypted in transit. Our partners may process it in countries other than your own, including the United States, using the safeguards described in their privacy policy.</p>
+    </section>
+
+    <section id="changes">
+      <h2 class="section-title"><span class="num">11</span> Changes to this policy</h2>
+      <p>If this policy changes, the new version will be published on this page and inside the game, and the effective date above will be updated. If a change affects how ad partners may use your information, the game will ask for your choice again where the law requires it.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title"><span class="num">12</span> Contact</h2>
+      <p>Questions about this policy, requests about your information, or anything else about Moonwake's privacy practices can be sent to:</p>
+      <p><strong>Qobly</strong><br>
+      <a href="mailto:kayalengine@gmail.com">kayalengine@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Qobly. Moonwake is an independent game. Unity, Unity Ads and LevelPlay are trademarks of Unity Technologies.</p>
+    <a class="back-top" href="#top">&uarr; Back to top</a>
+  </footer>
+</div>
+
+</body>
+</html>
