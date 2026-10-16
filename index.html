@@ -286,6 +286,17 @@
     nav.toc ol { columns: 1; }
   }
 
+  /* Phones: stack each row (name above its explanation) so long permission
+     names never squeeze the text. */
+  @media (max-width: 560px) {
+    .field-table thead { display: none; }
+    .field-table, .field-table tbody, .field-table tr, .field-table td { display: block; width: 100%; }
+    .field-table tr { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+    .field-table td { border-bottom: none; padding: 2px 0; }
+    .field-table td:first-child { min-width: 0; margin-bottom: 4px; }
+    .pill { white-space: normal; overflow-wrap: anywhere; margin: 0 4px 4px 0; }
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
   }
@@ -301,7 +312,7 @@
     </div>
     <h1>Privacy Policy</h1>
     <div class="meta">
-      <span>Effective <b>October 15, 2026</b></span>
+      <span>Effective <b>October 16, 2026</b></span>
       <span>Developer: <b>Qobly</b></span>
       <span>App: <b>Moonwake</b> (Android package <code>com.moonwake.game</code>)</span>
     </div>
@@ -316,9 +327,9 @@
     <p>Moonwake has no account and no server of its own. It is free because it shows ads, delivered by Unity. Here's exactly what that means.</p>
     <ul>
       <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Your progress, settings and year of birth are stored only on your device. Qobly never receives them.</li>
-      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ads are served by Unity LevelPlay and Unity Ads, which receive device information such as your advertising ID and IP address in order to show and measure ads.</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ads are served through Unity LevelPlay by ironSource Ads and Unity Ads, which receive device information such as your advertising ID and IP address in order to show and measure ads.</li>
       <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> You decide whether ads may be personalised, and can change your mind any time in Settings &rarr; Privacy.</li>
-      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Reminders are local notifications scheduled by your phone, never sent from a server.</li>
+      <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Reminders are written and scheduled on your phone, never sent from a server, and you can switch them off any time.</li>
       <li class="no"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> No account, no sign-in, no name or email collected, no in-app purchases.</li>
       <li class="no"><svg viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> No access to your camera, microphone, contacts, photos or GPS location. The app never asks for these.</li>
     </ul>
@@ -332,13 +343,15 @@
       <li><a href="#ads">3. Advertising</a></li>
       <li><a href="#choices">4. Your ad choices</a></li>
       <li><a href="#children">5. Age and children</a></li>
-      <li><a href="#permissions">6. Permissions</a></li>
-      <li><a href="#not-collected">7. What we don't collect</a></li>
-      <li><a href="#rights">8. Your rights</a></li>
-      <li><a href="#retention">9. Retention and deletion</a></li>
-      <li><a href="#security">10. Security and transfers</a></li>
-      <li><a href="#changes">11. Changes to this policy</a></li>
-      <li><a href="#contact">12. Contact</a></li>
+      <li><a href="#reminders">6. Reminders and notifications</a></li>
+      <li><a href="#ratings">7. Ratings on Google Play</a></li>
+      <li><a href="#permissions">8. Permissions</a></li>
+      <li><a href="#not-collected">9. What we don't collect</a></li>
+      <li><a href="#rights">10. Your rights</a></li>
+      <li><a href="#retention">11. Retention and deletion</a></li>
+      <li><a href="#security">12. Security and transfers</a></li>
+      <li><a href="#changes">13. Changes to this policy</a></li>
+      <li><a href="#contact">14. Contact</a></li>
     </ol>
   </nav>
 
@@ -346,8 +359,8 @@
 
     <section id="scope">
       <h2 class="section-title"><span class="num">01</span> What this covers</h2>
-      <p>This policy describes how <strong>Moonwake</strong>, a calm river game made by <strong>Qobly</strong>, handles information when you play it on Android. It covers the app itself and the advertising inside it. It doesn't cover other Qobly products or websites you may reach from an ad.</p>
-      <p class="soft">Moonwake has no server component of its own. The river, music and artwork are all built into the app. The only parts of the app that use the internet are the advertising services described in section 3.</p>
+      <p>This policy describes how <strong>Moonwake</strong>, a calm river game made by <strong>Qobly</strong>, handles information when you play it on Android. It covers the app itself, the advertising inside it and the Google Play features it uses. It doesn't cover other Qobly products or websites you may reach from an ad.</p>
+      <p class="soft">Moonwake has no server component of its own. The rivers, music and artwork are all built into the app, and the game plays fully offline. The only parts of the app that use the internet are the advertising services described in section 3 and Google Play's rating card described in section 7.</p>
     </section>
 
     <section id="on-device">
@@ -361,8 +374,9 @@
             <tr><td>Settings</td><td>Sound and music volumes, haptics, reduced motion and river sky, so the game opens the way you left it</td></tr>
             <tr><td>Year of birth</td><td>Asked once on first launch, so the ads you see are suitable for your age (see section 5)</td></tr>
             <tr><td>Personalised-ads choice</td><td>So your choice is applied every time the game starts</td></tr>
-            <tr><td>Reminder settings</td><td>Whether reminders are on and at what time, to schedule them on your phone</td></tr>
-            <tr><td>Play statistics</td><td>Simple counts such as voyages sailed and time played, shown in the in-game Journal</td></tr>
+            <tr><td>Reminder settings</td><td>Whether each kind of reminder is on, the time of the daily reminder, and when the game last asked for notification access, so it never asks more than it should</td></tr>
+            <tr><td>Rating-card timing</td><td>When Google Play's rating card was last offered and how many times, so it's shown rarely (see section 7)</td></tr>
+            <tr><td>Play statistics</td><td>Simple counts such as voyages sailed, time played and how often the game was opened, shown in the in-game Journal</td></tr>
             <tr><td>Ad counters</td><td>How many ads were shown today and when, so the game can keep ads infrequent and respect daily limits</td></tr>
           </tbody>
         </table>
@@ -372,23 +386,26 @@
 
     <section id="ads">
       <h2 class="section-title"><span class="num">03</span> Advertising</h2>
-      <p>Moonwake is free to play and supported by ads. Ads are delivered through <strong>Unity LevelPlay</strong>, a mediation service from Unity Technologies (including its affiliate ironSource), and the ad networks it works with, currently <strong>Unity Ads</strong>. Ads appear only between voyages, or when you choose to watch one for a reward. They never interrupt play.</p>
+      <p>Moonwake is free to play and supported by ads. Ads are delivered through <strong>Unity LevelPlay</strong>, a mediation service from Unity Technologies, which runs a short auction between the ad networks it works with, currently <strong>ironSource Ads</strong> (Unity's own network) and <strong>Unity Ads</strong>. Ads appear only at natural breaks, after a voyage or on the way back to the menu, or when you choose to watch one for a reward. They never interrupt play.</p>
       <p>When the game requests or shows an ad, these partners collect information directly from your device. Qobly does not receive this information.</p>
       <div class="field-table-wrap">
         <table class="field-table">
           <thead><tr><th>Information</th><th>Used by our partners to</th></tr></thead>
           <tbody>
             <tr><td>Advertising ID</td><td>Show and measure ads, limit how often you see the same ad, prevent fraud and, only if you allow it, personalise ads. You can reset or delete it in your phone's settings.</td></tr>
+            <tr><td>App Set ID</td><td>An ID Google provides for apps from the same developer on your phone, used for analytics and fraud prevention. It can't be used to track you across other developers' apps.</td></tr>
             <tr><td>IP address and approximate location derived from it</td><td>Deliver ads suitable for your country or region, and prevent fraud. Precise GPS location is never accessed.</td></tr>
-            <tr><td>Device information</td><td>Model, operating system version, language, time zone, screen size and network type, used to deliver ads that work on your device.</td></tr>
-            <tr><td>Ad interactions</td><td>Whether an ad was shown, tapped or watched to the end, used for measurement, rewards and fraud prevention. Unity collects this during the ad itself, not during gameplay.</td></tr>
+            <tr><td>Device information</td><td>Model, operating system version, language, time zone, screen size, mobile carrier and network type, used to deliver ads that work on your device.</td></tr>
+            <tr><td>Ad interactions</td><td>Whether an ad was shown, tapped or watched to the end, used for measurement, rewards and fraud prevention. This is collected during the ad itself, not during gameplay.</td></tr>
+            <tr><td>Android ad features</td><td>On phones that support Android's Privacy Sandbox, ad partners may use its ad topics and ad measurement features. These are managed by Android itself and can be switched off in your phone's settings (see section 4).</td></tr>
+            <tr><td>Ad quality checks</td><td>Information about the ads displayed, used to detect broken, misleading or inappropriate ads and keep them out of the game.</td></tr>
             <tr><td>Diagnostics</td><td>Technical information about ad loading and errors, used to keep ads working reliably.</td></tr>
           </tbody>
         </table>
       </div>
       <p>Each partner handles this information under its own privacy policy:</p>
       <ul>
-        <li>Unity (Unity LevelPlay, ironSource and Unity Ads): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Game Player and App User Privacy Policy</a></li>
+        <li>Unity (Unity LevelPlay, ironSource Ads and Unity Ads): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Game Player and App User Privacy Policy</a></li>
       </ul>
       <p class="soft">If we add another ad network in the future, it will be listed here before it appears in the game.</p>
     </section>
@@ -400,32 +417,52 @@
         <li><strong>European Economic Area, United Kingdom and Switzerland:</strong> the first time you play, Moonwake asks whether ads may be personalised. Personalisation stays off unless you choose to allow it. "Allow" and "Don't allow" are offered equally.</li>
         <li><strong>United States and other regions:</strong> switching personalised ads off is our <em>"Do Not Sell or Share My Personal Information"</em> option. It tells our partners not to use your data for targeted advertising.</li>
         <li><strong>Advertising ID:</strong> you can reset or delete it at any time in Android <em>Settings &rarr; Privacy &rarr; Ads</em> (the exact path varies by phone).</li>
+        <li><strong>Android ad privacy:</strong> on phones that have it, <em>Settings &rarr; Privacy &rarr; Ads &rarr; Ad privacy</em> lets you switch off ad topics, app-suggested ads and ad measurement for every app at once.</li>
       </ul>
       <p class="soft">Your choice is passed to Unity LevelPlay before any ad is requested, and again whenever you change it. LevelPlay forwards it to every ad network it works with.</p>
     </section>
 
     <section id="children">
       <h2 class="section-title"><span class="num">05</span> Age and children</h2>
-      <p>Moonwake is a general-audience game and isn't directed at children. On first launch it asks for your year of birth, without suggesting any particular answer, and stores it only on your device.</p>
+      <p>Moonwake is a general-audience game and isn't directed at children. Children's privacy laws require ads to be handled differently for younger players, so on first launch the game asks for your year of birth, without suggesting any particular answer. It's stored only on your device and is never sent to anyone; only the resulting setting (for example, "treat as a child") is passed to our ad partners.</p>
       <ul>
         <li>If you are <strong>under 13</strong>, our ad partners are told to treat you as a child under the U.S. Children's Online Privacy Protection Act (COPPA): ads are never personalised and no behavioural profile is built.</li>
         <li>In the EEA, UK and Switzerland, ads are never personalised for anyone <strong>under 16</strong>.</li>
-        <li>The year of birth can't be changed afterwards, so these protections can't be switched off from inside the game.</li>
+        <li>The year of birth can't be changed afterwards, and "Reset progress" keeps it, so these protections can't be switched off from inside the game.</li>
       </ul>
       <p>If you believe a child has used Moonwake and that data about them was collected, please contact us. We'll help you contact Unity to have it removed.</p>
     </section>
 
+    <section id="reminders">
+      <h2 class="section-title"><span class="num">06</span> Reminders and notifications</h2>
+      <p>Moonwake can send two kinds of gentle reminder. Both are written and scheduled on your phone itself: there is no notification server, and Qobly never knows whether you have reminders on or what they say.</p>
+      <ul>
+        <li><strong>Daily river:</strong> one note a day, at a time you choose (8 pm unless you change it), when the new daily river opens.</li>
+        <li><strong>Gentle reminders:</strong> an occasional note if you've been away for a while (after about 3, 7 and 14 days). Opening the game resets that clock.</li>
+      </ul>
+      <p>To make them less repetitive, the text can mention the day's river and your own progress, such as your best score or how many items you have left to find. That information is read from your phone's storage at the moment the reminder is scheduled and never leaves your device.</p>
+      <p>The first time you open Moonwake, Android asks whether it may send notifications. If you allow it, both reminders are on. If you don't, or close the question without answering, the game may ask once more on a later day and then not again. You can switch each reminder on or off at any time in <em>Settings &rarr; Reminders</em>, or turn off Moonwake's notifications entirely in Android's settings.</p>
+    </section>
+
+    <section id="ratings">
+      <h2 class="section-title"><span class="num">07</span> Ratings on Google Play</h2>
+      <p>Occasionally, after a voyage that went well and only once you've played for a while, Moonwake may show Google Play's own rating card, so you can rate the game without leaving it. Settings also has a "Rate Moonwake" link that opens the game's Play Store page.</p>
+      <p>The rating card is provided and handled entirely by Google Play under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Moonwake never sees whether you rated it, your rating or your review, and rating is always optional: nothing in the game changes either way.</p>
+    </section>
+
     <section id="permissions">
-      <h2 class="section-title"><span class="num">06</span> Permissions</h2>
-      <p>On Android, Moonwake uses these permissions:</p>
+      <h2 class="section-title"><span class="num">08</span> Permissions</h2>
+      <p>On Android, Moonwake uses these permissions. Some are added by the advertising services it includes, and are listed so nothing is hidden:</p>
       <div class="field-table-wrap">
         <table class="field-table">
           <thead><tr><th>Permission</th><th>What it's for</th></tr></thead>
           <tbody>
-            <tr><td><span class="pill">INTERNET</span> <span class="pill">ACCESS_NETWORK_STATE</span></td><td>Loading ads. The game itself plays fully offline.</td></tr>
+            <tr><td><span class="pill">INTERNET</span> <span class="pill">ACCESS_NETWORK_STATE</span></td><td>Loading ads and Google Play's rating card. The game itself plays fully offline.</td></tr>
             <tr><td><span class="pill">AD_ID</span></td><td>Lets our ad partners read your advertising ID, as described in section 3</td></tr>
-            <tr><td><span class="pill">POST_NOTIFICATIONS</span></td><td>Shows the reminders you turned on. You're asked only when you switch reminders on, never at launch.</td></tr>
+            <tr><td><span class="pill">ACCESS_ADSERVICES_TOPICS</span> <span class="pill">ACCESS_ADSERVICES_ATTRIBUTION</span></td><td>Android's Privacy Sandbox ad topics and ad measurement, used by our ad partners where your phone supports them (see sections 3 and 4)</td></tr>
+            <tr><td><span class="pill">POST_NOTIFICATIONS</span></td><td>Shows the reminders described in section 6. Android asks you the first time you open the game.</td></tr>
             <tr><td><span class="pill">RECEIVE_BOOT_COMPLETED</span></td><td>Re-arms your scheduled reminders after your phone restarts</td></tr>
+            <tr><td><span class="pill">WAKE_LOCK</span> <span class="pill">FOREGROUND_SERVICE</span></td><td>Lets the advertising services finish short background tasks, such as reporting that an ad was shown, reliably</td></tr>
             <tr><td><span class="pill">VIBRATE</span></td><td>Gentle haptic feedback during play, which you can turn off in Settings</td></tr>
           </tbody>
         </table>
@@ -433,7 +470,7 @@
     </section>
 
     <section id="not-collected">
-      <h2 class="section-title"><span class="num">07</span> What we don't collect</h2>
+      <h2 class="section-title"><span class="num">09</span> What we don't collect</h2>
       <p>To be specific rather than vague about it, Moonwake does not:</p>
       <ul>
         <li>Ask you to create an account, sign in, or give your name, email address or phone number.</li>
@@ -445,33 +482,33 @@
     </section>
 
     <section id="rights">
-      <h2 class="section-title"><span class="num">08</span> Your rights</h2>
+      <h2 class="section-title"><span class="num">10</span> Your rights</h2>
       <p>Depending on where you live, laws such as the EU and UK General Data Protection Regulation (GDPR) and U.S. state privacy laws (for example, California's CCPA/CPRA) give you rights over your personal information. These include the right to access, correct or delete it; to object to or restrict its use; to withdraw consent; and to opt out of its sale or sharing for targeted advertising. You will not be treated differently for using any of these rights.</p>
       <p>Where the GDPR applies, personalised advertising is based on your consent, which you can withdraw at any time in Settings &rarr; Privacy. Our partners' handling of the information they need to deliver and measure non-personalised ads and to prevent fraud is explained in their own privacy policy.</p>
       <p>Because Qobly holds no personal information about you, requests about advertising data are best sent to Unity using the link in section 3. We're always happy to help: write to us at the address below. You also have the right to complain to your local data protection authority.</p>
     </section>
 
     <section id="retention">
-      <h2 class="section-title"><span class="num">09</span> Retention and deletion</h2>
+      <h2 class="section-title"><span class="num">11</span> Retention and deletion</h2>
       <ul>
-        <li><strong>On your device:</strong> kept until you uninstall Moonwake or clear its storage in Android settings, which deletes everything. "Reset progress" in Settings clears your game progress but keeps your privacy settings.</li>
+        <li><strong>On your device:</strong> kept until you uninstall Moonwake or clear its storage in Android settings, which deletes everything. "Reset progress" in Settings clears your game progress but keeps your privacy and reminder settings.</li>
         <li><strong>With our ad partners:</strong> kept for as long as their privacy policy describes. You can limit it by switching personalised ads off and by resetting or deleting your advertising ID.</li>
       </ul>
       <p class="soft">There is no Moonwake account, so there is no account to close and no server-side copy held by Qobly to request deletion of.</p>
     </section>
 
     <section id="security">
-      <h2 class="section-title"><span class="num">10</span> Security and international transfers</h2>
+      <h2 class="section-title"><span class="num">12</span> Security and international transfers</h2>
       <p>Information sent to our ad partners is encrypted in transit. Our partners may process it in countries other than your own, including the United States, using the safeguards described in their privacy policy.</p>
     </section>
 
     <section id="changes">
-      <h2 class="section-title"><span class="num">11</span> Changes to this policy</h2>
+      <h2 class="section-title"><span class="num">13</span> Changes to this policy</h2>
       <p>If this policy changes, the new version will be published on this page and inside the game, and the effective date above will be updated. If a change affects how ad partners may use your information, the game will ask for your choice again where the law requires it.</p>
     </section>
 
     <section id="contact">
-      <h2 class="section-title"><span class="num">12</span> Contact</h2>
+      <h2 class="section-title"><span class="num">14</span> Contact</h2>
       <p>Questions about this policy, requests about your information, or anything else about Moonwake's privacy practices can be sent to:</p>
       <p><strong>Qobly</strong><br>
       <a href="mailto:kayalengine@gmail.com">kayalengine@gmail.com</a></p>
@@ -480,7 +517,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Qobly. Moonwake is an independent game. Unity, Unity Ads and LevelPlay are trademarks of Unity Technologies.</p>
+    <p>&copy; 2026 Qobly. Moonwake is an independent game. Unity, Unity Ads, LevelPlay and ironSource are trademarks of Unity Technologies. Google Play is a trademark of Google LLC.</p>
     <a class="back-top" href="#top">&uarr; Back to top</a>
   </footer>
 </div>
